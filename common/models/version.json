@@ -1,0 +1,41 @@
+{
+  "name": "version",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "vid": {
+      "type": "number",
+      "id":true,
+      "required": true
+    },
+    "versionType": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string"
+    },
+    "createTime": {
+      "type": "date"
+    },
+    "h5Version": {
+      "type": "string"
+    },
+    "binMax": {
+      "type": "string"
+    },
+    "binMin": {
+      "type": "string"
+    },
+    "updateTime": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

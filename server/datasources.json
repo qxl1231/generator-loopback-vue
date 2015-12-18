@@ -1,0 +1,13 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "appversion": {
+    "host": "0.0.0.0",
+    "port": 27017,
+    "database": "appversion",
+    "name": "appversion",
+    "connector": "mongodb"
+  }
+}
