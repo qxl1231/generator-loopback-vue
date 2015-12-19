@@ -1,0 +1,36 @@
+{
+  "name": "weather",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "city": {
+      "type": "string"
+    },
+    "cityid": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "today": {
+      "type": "hasOne",
+      "model": "today",
+      "foreignKey": ""
+    },
+    "forecast": {
+      "type": "hasMany",
+      "model": "forecast",
+      "foreignKey": ""
+    },
+    "history": {
+      "type": "hasMany",
+      "model": "history",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

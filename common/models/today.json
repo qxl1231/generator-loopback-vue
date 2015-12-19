@@ -1,0 +1,47 @@
+{
+  "name": "today",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "string"
+    },
+    "week": {
+      "type": "string"
+    },
+    "curTemp": {
+      "type": "string"
+    },
+    "aqi": {
+      "type": "string"
+    },
+    "fengxiang": {
+      "type": "string"
+    },
+    "fengli": {
+      "type": "string"
+    },
+    "hightemp": {
+      "type": "string"
+    },
+    "lowtemp": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "index": {
+      "type": "hasOne",
+      "model": "index",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,29 @@
+{
+  "name": "index",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "index": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string"
+    },
+    "otherName": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

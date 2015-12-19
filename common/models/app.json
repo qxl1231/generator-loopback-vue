@@ -8,7 +8,7 @@
   "properties": {
     "id": {
       "type": "number",
-      "id" : true,
+      "id": true,
       "required": true
     },
     "name": {

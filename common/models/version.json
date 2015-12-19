@@ -8,7 +8,7 @@
   "properties": {
     "vid": {
       "type": "number",
-      "id":true,
+      "id": true,
       "required": true
     },
     "versionType": {

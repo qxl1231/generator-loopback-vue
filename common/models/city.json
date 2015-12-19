@@ -1,0 +1,29 @@
+{
+  "name": "city",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "province_cn": {
+      "type": "string"
+    },
+    "district_cn": {
+      "type": "string"
+    },
+    "name_cn": {
+      "type": "string"
+    },
+    "name_en": {
+      "type": "string"
+    },
+    "area_id": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
