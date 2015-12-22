@@ -13,6 +13,7 @@
     "loopback-component-explorer": "^2.1.0",
     "loopback-connector-mongodb": "^1.13.2",
     "loopback-datasource-juggler": "^2.39.0",
+    "request": "^2.67.0",
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
