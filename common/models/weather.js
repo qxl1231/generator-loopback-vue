@@ -1,50 +1,82 @@
-var http = require('http');
+var request = require('request');
 var qs = require('querystring');
-var data = {
-    cityname: '无锡',
-    //time: new Date().getTime()
-};//这是需要提交的数据
+var weathpath = '/apistore/weatherservice/recentweathers?';
 
-
-var content = qs.stringify(data);
-var options = {
-    hostname: 'http://apis.baidu.com',
-    //port: 10086,
-    path: '/apistore/weatherservice/citylist?' + content,
-    method: 'GET',
-    headers: {
-        //'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-        'apikey': '9ac32c4392b24b3397c0b6fe7d166039'
-    }
-};
 
 module.exports = function (Weather) {
 
-    Weather.getWeather = function getWeather() {
+    Weather.getWeather = function getWeather(cityid, cityname, cb) {
         //1.dopost baidu api
         //2.把获取到的json放到数据库中,每天8点更新
+        setdata(cityid, cityname,cb);
+
+
+        //Weather.findOne({where: {_id: cityid}}, function (err, result) {
+        //    if (result) {
+        //        console.log(result.returndata);
+        //        cb(null, result.returndata);
+        //    }
+        //});
 
     };
 
+    var setdata = function set(cityid, cityname,cb) {
+        var data = {
+            cityname: '北京',
+            cityid: '101010100'
+            //time: new Date().getTime()
+        };//这是需要提交的数据
+        data.cityid = cityid;
+        data.cityname = cityname;
 
-    setInterval(function () {
-        //you task here
-        //http.setHeader('apikey', '9ac32c4392b24b3397c0b6fe7d166039');
+        var content = qs.stringify(data);
+        var options = {
+            url: 'https://apis.baidu.com' + weathpath + content,
+            method: 'GET',
+            headers: {
+                'User-Agent': 'request',
+                'apikey': '9ac32c4392b24b3397c0b6fe7d166039'
+            }
+        };
 
-        var req = http.request(options, function (res) {
-            console.log('STATUS: ' + res.statusCode);
-            console.log('HEADERS: ' + JSON.stringify(res.headers));
-            res.setEncoding('utf8');
-            res.on('data', function (chunk) {
-                console.log('BODY: ' + chunk);
-            });
-        });
+        function callback(error, response, body) {
+            if (!error && response.statusCode == 200) {
+                var info = JSON.parse(body);
+                var cityid = info.retData.cityid;
+                var json = {"cityid": cityid, "returndata": JSON.stringify(info.retData)};
+                console.log(JSON.stringify(json) + " retData");
+                Weather.upsert(json, function (err, result) {
+                    if (result) {
+                        console.log(result.returndata);
+                        cb(null, result.returndata);
+                        //todo:发送极光push给服务器,告知天气情况;
+                    }
+                });
+            }
+        }
+        request(options, callback);
+    };
 
-        req.on('error', function (e) {
-            console.log('problem with request: ' + e.message);
-        });
 
-        req.end();
-    }, 1 * 60 * 60 * 1000);
+
+    //}, 24 * 60 * 60 * 1000);
+    //}, 3 * 1000);
+
+
+    Weather.remoteMethod('getWeather', {
+        //isStatic: false,
+
+        accepts: [
+            {arg: 'cityid', type: 'string'},
+            {arg: 'cityname', type: 'string'}
+
+        ],
+
+        returns: [
+            {arg: 'weather', type: 'object'}
+        ],
+
+        http: {path: '/getWeather', verb: 'get'}
+    });
 
 };

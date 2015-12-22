@@ -1,7 +1,7 @@
 {
   "name": "city",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
@@ -19,7 +19,8 @@
       "type": "string"
     },
     "area_id": {
-      "type": "string"
+      "type": "string",
+      "id": true
     }
   },
   "validations": [],
