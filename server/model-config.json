@@ -44,24 +44,10 @@
     "dataSource": "appversion",
     "public": true
   },
-  "index": {
-    "dataSource": "appversion",
-    "public": true
-  },
-  "forecast": {
-    "dataSource": "appversion",
-    "public": true
-  },
-  "history": {
-    "dataSource": "appversion",
-    "public": true
-  },
-  "today": {
-    "dataSource": "appversion",
-    "public": true
-  },
   "weather": {
     "dataSource": "appversion",
-    "public": true
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }
