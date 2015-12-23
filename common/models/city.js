@@ -1,5 +1,6 @@
 var request = require('request');
 var qs = require('querystring');
+var JPush = require('jpush-sdk');
 var citypath = '/apistore/weatherservice/citylist?';
 
 
@@ -49,10 +50,26 @@ module.exports = function (City) {
                     console.log(JSON.stringify(city));
                     City.upsert(city, function (err, result) {
                         if (result) {
+
+                            //todo:发送极光push给服务器,告知天气情况;
+                            var client = JPush.buildClient('0a5dc687bbb60c9f25a04143', 'ba1b55af1daad6b18ebb5bdc');
+
+                            //easy push
+                            client.push().setPlatform(JPush.ALL)
+                                .setAudience(JPush.ALL)
+                                .setNotification('城市推送测试', JPush.ios('ios alert', 'happy', 5))
+                                .send(function (err, res) {
+                                    if (err) {
+                                        console.log(err.message);
+                                    } else {
+                                        console.log('Sendno: ' + res.sendno);
+                                        console.log('Msg_id: ' + res.msg_id);
+                                    }
+                                });
                         }
                     });
                 }
-                //todo:发送极光push给服务器,告知天气情况;
+
             }
         }
 
