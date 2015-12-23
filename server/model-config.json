@@ -39,15 +39,5 @@
   "version": {
     "dataSource": "appversion",
     "public": true
-  },
-  "city": {
-    "dataSource": "appversion",
-    "public": true
-  },
-  "weather": {
-    "dataSource": "appversion",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
   }
 }
