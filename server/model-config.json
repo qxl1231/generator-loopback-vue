@@ -14,22 +14,22 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "appversion"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "appversion",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "appversion",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "appversion",
     "public": false
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "appversion",
     "public": false
   },
   "app": {
