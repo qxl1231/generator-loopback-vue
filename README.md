@@ -1,5 +1,5 @@
 # My Application
-[![CircleCI](https://circleci.com/gh/qxl1231/app_update_server/tree/master.svg?style=svg)](https://circleci.com/gh/qxl1231/app_update_server/tree/master)
+[![CircleCI](https://circleci.com/gh/qxl1231/nodeclub/tree/master.svg?style=svg)](https://circleci.com/gh/qxl1231/nodeclub/tree/master)
 
 ![image](https://cloud.githubusercontent.com/assets/8305742/17387903/810c8b16-5a2a-11e6-862a-9306067bfc34.png)
 
