@@ -1,4 +1,7 @@
-# My Application loopback+vue[![CircleCI](https://circleci.com/gh/qxl1231/app_update_server.svg?style=svg)](https://circleci.com/gh/qxl1231/app_update_server)
+# My Application loopback+vue
+>当前build,CI状态:
+[![Build Status](https://travis-ci.org/qxl1231/app_update_server.svg?branch=master)](https://travis-ci.org/qxl1231/app_update_server)
+[![CircleCI](https://circleci.com/gh/qxl1231/app_update_server.svg?style=svg)](https://circleci.com/gh/qxl1231/app_update_server)
 ![image](https://cloud.githubusercontent.com/assets/8305742/17387903/810c8b16-5a2a-11e6-862a-9306067bfc34.png)
 
 ![image](https://cloud.githubusercontent.com/assets/8305742/17387949/dce5d7d0-5a2a-11e6-9e1d-5fe93b2924b2.png)
