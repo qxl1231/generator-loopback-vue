@@ -1,13 +1,18 @@
 {
-  "name": "appversion",
+  "name": "generator-loopback-vue",
   "version": "1.0.0",
   "main": "server/server.js",
+   "files": [
+    "app",
+    "router"
+  ],
   "scripts": {
     "build:js": "browserify -t vueify ${npm_package_config_src_js} > ${npm_package_config_dist_js}",
     "pretest": "jshint .",
     "watch:js": "watchify -p browserify-hmr -t vueify ${npm_package_config_src_js} -o ${npm_package_config_dist_js} -dv"
   },
   "dependencies": {
+    "yeoman-generator": "^0.18.10",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "loopback": "^2.22.0",
@@ -34,10 +39,16 @@
     "watchify": "^3.6.0"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/qxl1231/generator-loopback-vue.git"
   },
-  "description": "appversion",
+   "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "qiangxl",
+  "license": "MIT",
+  "description": "generator-loopback-vue ",
+   "homepage": "https://github.com/qxl1231/generator-loopback-vue"
   "config": {
     "src_js": "client/main.js",
     "dist_js": "client/bundle.js"
