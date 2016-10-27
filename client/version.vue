@@ -1,7 +1,7 @@
 <template>
     <div class="container">
 
-        <form role="form" style="display:none" id="selectid"><strong>请选择appID:</strong>
+        <form role="form"  id="selectid"><strong>请选择appID:</strong>
 
             <div class="form-group">
                 <select v-model="value" @change="changeFunc(value)" class="form-control">
@@ -14,7 +14,7 @@
         </form>
 
 
-        <table class="table" style="display:none">
+        <table class="table" >
             <caption><strong>app下版本号</strong></caption>
             <thead>
             <tr>
@@ -37,7 +37,7 @@
                 <td><input v-model="editing.binMax" placeholder="可以不填,ex:5.0.0"/></td>
                 <td><input v-model="editing.binMin" placeholder="可以不填,ex:1.0.0"/></td>
                 <td>
-                    <button class="btn btn-info" @click="addApp" style="display:none;">添加</button>
+                    <button class="btn btn-info" @click="addApp" >添加</button>
                 </td>
             </tr>
 
@@ -69,7 +69,7 @@
         props: ["appid"],
 
         http: {
-            root: '/api'
+            root: '/api/v1'
         },
         events: {
             "remove-app": function (app) {
@@ -151,14 +151,19 @@
             changeFunc: function (value) {
 
                 var self = this;
-//               // GET request
-//                self.$http({url: '/api/apps', method: 'GET'}).then(function (response) {
-//                    // success callback
-//                    self.myapp = response.data;
-//                }, function (response) {
-//                    // error callback
-//                });
-                var resurl = 'apps/' + value + '/versions/:id';
+                var access_token = localStorage.getItem('access_token');
+//                console.log(access_token);
+
+                // GET request
+                var httpurl = '/api/v1/apps?access_token=' + access_token;
+                self.$http({url: httpurl, method: 'GET'}).then(function (response) {
+                    // success callback
+                    self.myapp = response.data;
+                }, function (response) {
+                    // error callback
+                });
+                var access_token = localStorage.getItem('access_token');
+                var resurl = 'apps/' + value + '/versions/:id?access_token=' + access_token;
                 apps = self.$resource(resurl);
                 this.fetchApps();
 
@@ -167,16 +172,19 @@
         },
         ready: function () {
             var self = this;
+            var access_token = localStorage.getItem('access_token');
+//            console.log(access_token);
+
             // GET request
-            self.$http({url: '/api/apps', method: 'GET'}).then(function (response) {
+            var httpurl = '/api/v1/apps?access_token=' + access_token;
+            self.$http({url: httpurl, method: 'GET'}).then(function (response) {
                 // success callback
                 self.myapp = response.data;
-                console.log(self.myapp[0].id);
+                console.log(self.myapp[0]);
                 self.changeFunc(self.myapp[0].id);
             }, function (response) {
                 // error callback
             });
-
         }
 
     }
