@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <table class="table" style="display:none">
+        <table class="table" style="">
             <caption><strong>app详情</strong></caption>
             <thead>
             <tr>
@@ -8,7 +8,6 @@
                 <th>app名字</th>
                 <th>创建时间</th>
                 <th>更新时间</th>
-
                 <th>操作</th>
             </tr>
             </thead>
@@ -16,11 +15,10 @@
             <tr class="success">
                 <td><input v-model="editing.id" placeholder="必须填写,且为不重复数字"/></td>
                 <td><input v-model="editing.name" placeholder="必须填写"/></td>
-                <td><input v-model="editing.createTime" placeholder="必须为时间date格式"/></td>
-                <td><input v-model="editing.updateTime" placeholder="必须为时间date格式"/></td>
-
+                <td><input v-model="editing.createTime" placeholder="必须为时间date格式" type="datetime-local"/></td>
+                <td><input v-model="editing.updateTime" placeholder="必须为时间date格式" type="datetime-local"/></td>
                 <td>
-                    <button class="btn btn-info" @click="addApp" style="display:none;">添加</button>
+                    <button class="btn btn-info" @click="addApp" >添加</button>
                 </td>
             </tr>
 
@@ -42,6 +40,7 @@
         </table>
         <!--<button class="btn btn-info" @click="addApp" style="display:none; float:right;">添加app</button>-->
     </div>
+    <version></version>
 </template>
 
 <script>
@@ -49,7 +48,7 @@
 
     module.exports = {
         http: {
-            root: '/api',
+            root: '/api/v1',
 //            headers:{ Authorization: 1231
 //
 //            }
@@ -82,12 +81,15 @@
                 var id = self.editing.id;
                 var name = self.editing.name;
                 var createTime = self.editing.createTime;
-
                 var updateTime = self.editing.updateTime;
-
-
+                console.log('id: ' + id + 'name: ' + name + ' ,createTime: ' + createTime + ' , updateTime: ' + updateTime);
                 if (id && name) {
-                    apps.save({}, {id: id, name: name,createTime:createTime,updateTime:updateTime}, function (data, status, request) {
+                    apps.save({}, {
+                        id: id,
+                        name: name,
+                        createTime: createTime,
+                        updateTime: updateTime
+                    }, function (data, status, request) {
                         self.editing = data;
                         self.fetchApps();
                     });
@@ -117,12 +119,14 @@
             }
         },
         ready: function () {
-            apps = this.$resource('apps/:id');
+            var access_token = localStorage.getItem('access_token');
+
+            apps = this.$resource('apps/:id?access_token=' + access_token);
             this.fetchApps();
         },
-//        components: {
-//            version: require("./version.vue")
-//        }
+        components: {
+            version: require("./version.vue")
+        }
 
 
     }
