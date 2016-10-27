@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
 
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -19,10 +19,14 @@
     <title>appVersion</title>
 </head>
 <body>
-<login></login>
-<app></app>
-<version></version>
-<script src="bundle.js"></script>
+<div id="app">
+
+    <router-view></router-view>
+</div>
+</div>
+<script src="bundle.js">
+
+</script>
+
 </body>
 </html>
-
