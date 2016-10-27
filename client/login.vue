@@ -27,12 +27,12 @@
                     <!--</div>-->
                     <div class="form-group">
                         <input type="username" name="username" id="username" class="form-control input-lg"
-                               value="qxl1231"
+                               value=""
                                placeholder="username ">
                     </div>
                     <div class="form-group">
                         <input type="password" name="password" id="password" class="form-control input-lg"
-                               placeholder="Password" value="1231">
+                               placeholder="Password" value="">
                     </div>
                     <!--<span class="button-checkbox">-->
                     <!--<button type="button" class="btn" data-color="info">Remember Me</button>-->
@@ -128,19 +128,22 @@
     module.exports = {
 
         http: {
-            root: '/api'
+            root: '/api/v1'
         },
         data: function () {
             return {
                 user: {
                     usename: "",
                     email: "",
-                    pwd: ""
+                    pwd: "",
+                    access_token:""
                 }
             }
         },
         methods: {
             login: function () {
+                var self=this;
+
                 var username = $('#username').val();
                 var password = $('#password').val();
 //                console.log(username + password)
@@ -148,7 +151,7 @@
                 var settings = {
                     "async": true,
                     "crossDomain": true,
-                    "url": "/api/Users/login",
+                    "url": "/api/v1/Users/login",
                     "method": "POST",
                     "headers": {
                         "content-type": "application/json",
@@ -161,19 +164,21 @@
                 }
 
                 $.ajax(settings).done(function (response) {
-                    self.user = response;
-                    if (response && response.userId) {
-                        $("fieldset").hide();
-                        $(".table").show();
-                        $("#selectid").show();
-
-                        $("button").show();
-
+//                    self.user = response;
+                    console.log(self);
+                    if (response && response.userId&&response.id) {
+                        localStorage.setItem('access_token',response.id);
+//                        $("fieldset").hide();
+//                        $(".table").show();
+//                        $("#selectid").show();
+//                        $("button").show();
+                        //self.$route.router.go('/appversion');
+                        self.$route.router.go('/select');
                     }
 
                 }).error(function (err) {
-                    $("fieldset").show();
-                     $(".alert").show();
+//                    $("fieldset").show();
+//                     $(".alert").show();
                 });
             }
         }
