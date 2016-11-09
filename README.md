@@ -59,3 +59,13 @@ https://github.com/vuejs/vueify
 # LICENSE
 
 MIT
+
+
+
+## 捐赠
+
+您的捐赠，是我持续开源的动力。
+
+支付宝 | 微信
+------|------
+![](./alipay.jpeg) | ![](./wechat.jpeg)
