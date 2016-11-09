@@ -68,4 +68,4 @@ MIT
 
 支付宝 | 微信
 ------|------
-![](./alipay.jpeg) | ![](./wechat.jpeg)
+![](./alipay.jpeg) | ![](./Wechat.jpeg)
