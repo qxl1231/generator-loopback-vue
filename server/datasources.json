@@ -4,7 +4,7 @@
     "connector": "memory"
   },
   "appversion": {
-    "host": "tcp://db1.daocloudinternal.io",
+    "host": "db1.daocloudinternal.io",
     "port": 60261,
     "database": "temp_db",
     "name": "appversion",
