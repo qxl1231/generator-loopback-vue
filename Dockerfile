@@ -25,4 +25,5 @@ RUN npm install
 COPY . /usr/src/app
 
 EXPOSE 4000
-CMD [ "npm run build:js", "node ." ]
+# CMD [ "node", "." ]
+CMD npm run build:js; node .
