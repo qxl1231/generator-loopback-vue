@@ -3,7 +3,9 @@
 [![Build Status](https://travis-ci.org/qxl1231/generator-loopback-vue.svg?branch=master)](https://travis-ci.org/qxl1231/generator-loopback-vue)
 [![CircleCI](https://circleci.com/gh/qxl1231/generator-loopback-vue.svg?style=svg)](https://circleci.com/gh/qxl1231/generator-loopback-vue)
 
-
+# Docker镜像 项目: loopback-vue
+最新版本: latest
+镜像地址: daocloud.io/qxl1231/loopback-vue
 
 
 ![image](https://cloud.githubusercontent.com/assets/8305742/17387903/810c8b16-5a2a-11e6-862a-9306067bfc34.png)
