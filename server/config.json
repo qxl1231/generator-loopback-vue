@@ -1,6 +1,6 @@
 {
   "restApiRoot": "/api",
-  "host": "0.0.0.0",
+  "host": "qxl1231-lb-vue3.daoapp.io",
   "port": 4000,
   "remoting": {
     "context": {
