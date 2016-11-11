@@ -4,10 +4,12 @@
     "connector": "memory"
   },
   "appversion": {
-    "host": "0.0.0.0",
-    "port": 27017,
-    "database": "appversion",
+    "host": "tcp://db1.daocloudinternal.io",
+    "port": 60261,
+    "database": "temp_db",
     "name": "appversion",
+      "username": "admin",
+     "password": "XJ0hbPDk",
     "connector": "mongodb"
   }
 }
