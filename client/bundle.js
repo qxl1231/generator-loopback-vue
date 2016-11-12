@@ -6199,4 +6199,5 @@ function isTemplate(el) {
  */
 
 function createAnchor(content, persist) {
-  var anchor = config.debug ? document.createComment(content) : document.createTextNode(persist ? ' ' : ''
+  var anchor = config.debug ? document.createComment(content) : document.createTextNode(persist ? ' ' : '')
+  }
