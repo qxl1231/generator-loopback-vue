@@ -151,7 +151,7 @@
                 var settings = {
                     "async": true,
                     "crossDomain": true,
-                    "url": "http://loopback-vue.daoapp.io/:4000/api/v1/Users/login",
+                    "url": "http://loopback-vue.daoapp.io:4000/api/v1/Users/login",
                     "method": "POST",
                     "headers": {
                         "content-type": "application/json",
