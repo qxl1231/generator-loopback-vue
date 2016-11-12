@@ -11,6 +11,8 @@
 
 
 ![image](https://cloud.githubusercontent.com/assets/8305742/17387903/810c8b16-5a2a-11e6-862a-9306067bfc34.png)
+> 集成了daovoice玩玩哈哈~~~炫酷!
+![image](./daovoice.png)
 
 ![image](https://cloud.githubusercontent.com/assets/8305742/17387949/dce5d7d0-5a2a-11e6-9e1d-5fe93b2924b2.png)
 
