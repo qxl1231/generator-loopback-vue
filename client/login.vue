@@ -183,5 +183,11 @@
             }
         }
     }
+//    还没有登录
+    daovoice('init', {
+        app_id: "98f7bd8c"
+    });
+
+    daovoice('update');
 
 </script>
