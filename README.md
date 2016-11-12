@@ -7,7 +7,7 @@
 最新版本: latest
 镜像地址: daocloud.io/qxl1231/lb-vue2
 # 在线demo:
-> http://qxl1231-lb-vue3.daoapp.io/
+> http://loopback-vue.daoapp.io/
 
 
 ![image](https://cloud.githubusercontent.com/assets/8305742/17387903/810c8b16-5a2a-11e6-862a-9306067bfc34.png)
