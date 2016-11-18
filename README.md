@@ -1,4 +1,14 @@
 # generator-loopback-vue 
+通过本源码你可以学习到:
+- Strongloop是是如何通过一行命令和代码实现restful API接口,包括CRUD等14个接口
+- model是如何定义的,以及model-relation 定义,以及ACL接口权限控制等
+- CI持续集成的配置,Docker容器,docker部署文件
+- 如何migrate数据库
+- vue1.0 是如何玩?以及vue-resouce的使用,vue-router,webpack,babel等
+- loopback自带的authenticate 权限控制,accesstoken机制,credentials
+- strong-pm 部署命令,以及slc主要命令
+- 如何把项目部署在daocloud中,以及集成daovoice服务
+
 >当前build,CI状态:
 [![Build Status](https://travis-ci.org/qxl1231/generator-loopback-vue.svg?branch=master)](https://travis-ci.org/qxl1231/generator-loopback-vue)
 [![CircleCI](https://circleci.com/gh/qxl1231/generator-loopback-vue.svg?style=svg)](https://circleci.com/gh/qxl1231/generator-loopback-vue)
