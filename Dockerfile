@@ -28,4 +28,4 @@ EXPOSE 4000
 
 # CMD [ "npm", "run build:js" ]
 #CMD [ "node", "." ]
-CMD npm run build:js && node server/bin/create-admin.js && node .
+CMD npm run build:js && node .
