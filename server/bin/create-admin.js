@@ -15,8 +15,8 @@ app.models.User.validations.email =
     ];
 
 app.models.User.create([{
-  username: 'username',
-  password: 'password'
+  username: 'test',
+  password: 'testpwd'
 }], function(err, users) {
   if (err) throw err;
   console.log('Admin account created.');

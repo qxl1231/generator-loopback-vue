@@ -57,24 +57,44 @@ module.exports = function (App) {
   };
 
   var compare = function compare(v1, v2) {
-    var v1_tmp = v1, v2_tmp = v2;
-    v1 = v1.replace(/\./g, '');
-    v2 = v2.replace(/\./g, '');
-    // console.log("去掉小数点：", v1, v2);
-    var len = Math.max(v1.length, v2.length);
-    v1 = v1 + Array(len - v1.length + 1).join(0);
-    v2 = v2 + Array(len - v2.length + 1).join(0);
-    // console.log("补长对齐：", v1, v2);
-    v1 = parseInt(v1);
-    v2 = parseInt(v2);
-    // console.log("去掉前导0：", v1, v2);
-    // console.log("大的是：", Math.max(v1, v2));
-    var ret = v1 > v2 ? 1 : v1 == v2 ? 0 : -1;
-    // console.log("compare:", v1_tmp, " ? ", v2_tmp, " : ", ret);
-    return ret;
+    // var v1_tmp = v1, v2_tmp = v2;
+    // v1 = v1.replace(/\./g, '');
+    // v2 = v2.replace(/\./g, '');
+    // // console.log("去掉小数点：", v1, v2);
+    // var len = Math.max(v1.length, v2.length);
+    // v1 = v1 + Array(len - v1.length + 1).join(0);
+    // v2 = v2 + Array(len - v2.length + 1).join(0);
+    // // console.log("补长对齐：", v1, v2);
+    // v1 = parseInt(v1);
+    // v2 = parseInt(v2);
+    // // console.log("去掉前导0：", v1, v2);
+    // // console.log("大的是：", Math.max(v1, v2));
+    // var ret = v1 > v2 ? 1 : v1 == v2 ? 0 : -1;
+    // // console.log("compare:", v1_tmp, " ? ", v2_tmp, " : ", ret);
+    // return ret;
+
+    var newVersion = v1, curVersion = v2;
+    if (curVersion === undefined) {
+      curVersion = '0.0.0';
+    }
+    console.log('newVersion: ' + newVersion + ' , curVersion: ' + curVersion);
+    var newVersions = newVersion.split('.');
+    var curVersions = curVersion.split('.');
+    var length = newVersions.length;
+    for (var i = 0; i < length; i++) {
+      var newVersionValue = newVersions[i] === undefined ? 0 : newVersions[i];
+      var newVer = parseInt(newVersionValue);
+      var curVersionValue = curVersions[i] === undefined ? 0 : curVersions[i];
+      var curVer = parseInt(curVersionValue);
+      console.log('newVer : ' + newVer + ', curVer: ' + curVer);
+      if (newVer < curVer) {
+        return -1;
+      } else if(newVer > curVer) {
+        return 1;
+      }
+    }
+    return 0;
   }
-
-
 
   App.remoteMethod('checkVersion', {
     isStatic: false,
@@ -92,5 +112,42 @@ module.exports = function (App) {
     ],
 
     http: {path: '/updates/check', verb: 'post'}
+  });
+
+  App.prototype.checkAppVersion = function checkAppVersion(cb) {
+    console.log('checkAppVersion......');
+    this.appversions(function (err, results) {
+      if (err) {
+        return cb(err);
+      }
+      var bestUpdate = results[0];
+      for (i = 0; i < results.length; i++) {
+        var latest_verCode = results[i]['verCode'];
+        var obj = results[i];
+        console.log('bestUpdate : ' + JSON.stringify(bestUpdate) + ' , latest_verCode: ' + latest_verCode);
+        if (compare(latest_verCode, bestUpdate.verCode) === 1) {
+          bestUpdate = obj;
+        }
+      }
+      if (bestUpdate != null) {
+        cb(null, bestUpdate.verCode, bestUpdate.releaseNotes, bestUpdate.apkPath);
+      } else {
+        cb(null, '', '', '');
+      }
+    });
+  };
+
+  App.remoteMethod('checkAppVersion', {
+    isStatic: false,
+
+    accepts: [],
+
+    returns: [
+      {arg: 'verCode', type: 'string'},
+      {arg: 'releaseNotes', type: 'string'},
+      {arg: 'apkPath', type: 'string'}
+    ],
+
+    http: {path: '/updates/checkApp', verb: 'get'}
   });
 };

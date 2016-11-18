@@ -8,7 +8,7 @@
   "properties": {
     "id": {
       "type": "number",
-      "id" : true,
+      "id": true,
       "required": true
     },
     "name": {
@@ -27,6 +27,11 @@
     "versions": {
       "type": "hasMany",
       "model": "version",
+      "foreignKey": ""
+    },
+    "appversions": {
+      "type": "hasMany",
+      "model": "appversion",
       "foreignKey": ""
     }
   },
@@ -48,6 +53,12 @@
       "principalId": "$everyone",
       "permission": "ALLOW",
       "property": "checkVersion"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "checkAppVersion"
     }
   ],
   "methods": {}

@@ -158,7 +158,9 @@
                 var httpurl = '/api/v1/apps?access_token=' + access_token;
                 self.$http({url: httpurl, method: 'GET'}).then(function (response) {
                     // success callback
-                    self.myapp = response.data;
+                    if (response.data&&response.data[0]!=undefined) {
+                        self.myapp = response.data;
+                    }
                 }, function (response) {
                     // error callback
                 });
@@ -179,9 +181,11 @@
             var httpurl = '/api/v1/apps?access_token=' + access_token;
             self.$http({url: httpurl, method: 'GET'}).then(function (response) {
                 // success callback
-                self.myapp = response.data;
-                console.log(self.myapp[0]);
-                self.changeFunc(self.myapp[0].id);
+                if (response.data&&response.data[0]!=undefined) {
+                    self.myapp = response.data;
+                    console.log(self.myapp[0]);
+                    self.changeFunc(self.myapp[0].id);
+                }
             }, function (response) {
                 // error callback
             });

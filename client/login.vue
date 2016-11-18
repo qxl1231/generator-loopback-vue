@@ -151,7 +151,7 @@
                 var settings = {
                     "async": true,
                     "crossDomain": true,
-                    "url": "/api/Users/login",
+                    "url": "/api/v1/Users/login",
                     "method": "POST",
                     "headers": {
                         "content-type": "application/json",

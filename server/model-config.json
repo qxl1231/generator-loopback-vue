@@ -39,5 +39,9 @@
   "version": {
     "dataSource": "appversion",
     "public": true
+  },
+  "appversion": {
+    "dataSource": "appversion",
+    "public": true
   }
 }
