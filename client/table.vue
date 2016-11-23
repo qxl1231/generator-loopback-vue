@@ -38,10 +38,12 @@
             <!--:editing-id="editing.id"></browser-item>-->
             </tbody>
         </table>
+        <zpagenav></zpagenav>
         <!--<button class="btn btn-info" @click="addApp" style="display:none; float:right;">添加app</button>-->
     </div>
+
     <version></version>
-    <zpagenav></zpagenav>
+
 </template>
 
 <script>
@@ -137,8 +139,8 @@
 //            var total=55;
             var self=this.$children;
 //            console.log(self[1].$data.page)
-            var page=self[1].$data.page;
-            var pageSize=self[1].$data.pageSize;
+            var page=self[0].$data.page;
+            var pageSize=self[0].$data.pageSize;
             var skip=(page - 1) * pageSize;
             var filter={"skip":skip,"limit":pageSize};
             filter=JSON.stringify(filter);

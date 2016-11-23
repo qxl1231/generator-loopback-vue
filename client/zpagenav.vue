@@ -11,7 +11,6 @@
     var zPagenav = require('vue-pagenav')
     Vue.use(zPagenav)
 
-    var total=
     //or direct use if window.Vue exists
     //Vue.use(window.zPagenav)
 
