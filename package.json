@@ -1,6 +1,6 @@
 {
   "name": "generator-loopback-vue",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "server/server.js",
   "scripts": {
     "build:js": "browserify -t vueify ${npm_package_config_src_js} > ${npm_package_config_dist_js}",
@@ -16,6 +16,7 @@
     "loopback-connector-mongodb": "^1.13.0",
     "loopback-datasource-juggler": "^2.39.0",
     "serve-favicon": "^2.0.1",
+    "vue-pagenav": "^1.5.0",
     "vue-resource": "^0.1.17",
     "vue-router": "^0.7.11",
     "vueify": "^6.0.0"
@@ -33,7 +34,7 @@
     "vueify-insert-css": "^1.0.0",
     "watchify": "^3.6.0"
   },
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/qxl1231/generator-loopback-vue.git"
   },
@@ -44,8 +45,6 @@
   ],
   "author": "qiangxl",
   "license": "MIT",
-
- 
   "description": "generator-loopback-vue",
   "config": {
     "src_js": "client/main.js",

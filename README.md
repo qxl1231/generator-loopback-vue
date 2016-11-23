@@ -8,6 +8,8 @@
 - loopback自带的authenticate 权限控制,accesstoken机制,credentials
 - strong-pm 部署命令,以及slc主要命令
 - 如何把项目部署在daocloud中,以及集成daovoice服务
+- 增加了个vue-pagenav 组件的使用 实现分页功能
+
 
 >当前build,CI状态:
 [![Build Status](https://travis-ci.org/qxl1231/generator-loopback-vue.svg?branch=master)](https://travis-ci.org/qxl1231/generator-loopback-vue)

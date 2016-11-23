@@ -41,6 +41,7 @@
         <!--<button class="btn btn-info" @click="addApp" style="display:none; float:right;">添加app</button>-->
     </div>
     <version></version>
+    <zpagenav></zpagenav>
 </template>
 
 <script>
@@ -63,6 +64,7 @@
                 }
             }
         },
+
         data: function () {
             return {
                 msg: 'Replaceing',
@@ -116,16 +118,36 @@
             remove: function (app) {
 
                 this.$dispatch("remove-app", app);
+            },
+            refresh: function (page,pageSize) {
+                var page=page;
+                var pageSize=pageSize;
+                var skip=(page - 1) * pageSize;
+                var filter={"skip":skip,"limit":pageSize};
+                filter=JSON.stringify(filter);
+                var access_token = localStorage.getItem('access_token');
+                apps = this.$resource('apps/:id?access_token=' + access_token+'&filter='+filter);
+                this.fetchApps();
             }
         },
         ready: function () {
             var access_token = localStorage.getItem('access_token');
-
-            apps = this.$resource('apps/:id?access_token=' + access_token);
+//            var pageNow=5;
+//            var limit=10;
+//            var total=55;
+            var self=this.$children;
+//            console.log(self[1].$data.page)
+            var page=self[1].$data.page;
+            var pageSize=self[1].$data.pageSize;
+            var skip=(page - 1) * pageSize;
+            var filter={"skip":skip,"limit":pageSize};
+            filter=JSON.stringify(filter);
+            apps = this.$resource('apps/:id?access_token=' + access_token+'&filter='+filter);
             this.fetchApps();
         },
         components: {
-            version: require("./version.vue")
+            version: require("./version.vue"),
+            zpagenav: require("./zpagenav.vue")
         }
 
 
