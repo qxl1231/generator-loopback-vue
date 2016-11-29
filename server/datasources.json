@@ -1,15 +1,15 @@
 {
   "db": {
     "name": "db",
-    "connector": "memory"
+    "connector": "memory",
+    "file":"data.json"
   },
   "appversion": {
-    "host": "db1.daocloudinternal.io",
-    "port": 60261,
+    "host": "localhost",
+    "port": 27017,
     "database": "temp_db",
     "name": "appversion",
-      "username": "admin",
-     "password": "XJ0hbPDk",
+
     "connector": "mongodb"
   }
 }

@@ -14,34 +14,34 @@
     ]
   },
   "User": {
-    "dataSource": "appversion"
+    "dataSource": "db"
   },
   "AccessToken": {
-    "dataSource": "appversion",
+    "dataSource": "db",
     "public": false
   },
   "ACL": {
-    "dataSource": "appversion",
+    "dataSource": "db",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "appversion",
+    "dataSource": "db",
     "public": false
   },
   "Role": {
-    "dataSource": "appversion",
+    "dataSource": "db",
     "public": false
   },
   "app": {
-    "dataSource": "appversion",
+    "dataSource": "db",
     "public": true
   },
   "version": {
-    "dataSource": "appversion",
+    "dataSource": "db",
     "public": true
   },
   "appversion": {
-    "dataSource": "appversion",
+    "dataSource": "db",
     "public": true
   }
 }
