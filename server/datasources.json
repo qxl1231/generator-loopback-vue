@@ -3,13 +3,5 @@
     "name": "db",
     "connector": "memory",
     "file":"data.json"
-  },
-  "appversion": {
-    "host": "localhost",
-    "port": 27017,
-    "database": "temp_db",
-    "name": "appversion",
-
-    "connector": "mongodb"
   }
 }
