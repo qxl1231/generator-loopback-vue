@@ -1,6 +1,6 @@
 {
   "name": "generator-loopback-vue",
-  "version": "1.2.3",
+  "version": "1.2.8",
   "main": "server/server.js",
   "scripts": {
     "build:js": "browserify -t vueify ${npm_package_config_src_js} > ${npm_package_config_dist_js}",

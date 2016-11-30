@@ -20,7 +20,7 @@
 镜像地址: daocloud.io/qxl1231/lb-vue2
 # 在线demo:
 > http://loopback-vue.daoapp.io/
-
+`帐号:test,密码:testpwd`
 
 ![image](https://cloud.githubusercontent.com/assets/8305742/17387903/810c8b16-5a2a-11e6-862a-9306067bfc34.png)
 > 集成了daovoice玩玩哈哈~~~炫酷!
