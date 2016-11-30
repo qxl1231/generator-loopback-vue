@@ -1,0 +1,28 @@
+{
+  "ids": {
+    "User": 2,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 2,
+    "Role": 2,
+    "app": 1,
+    "version": 1,
+    "appversion": 1
+  },
+  "models": {
+    "User": {
+      "1": "{\"username\":\"test\",\"password\":\"$2a$10$6lu5b7RFyuJFG8Nf.PfaLO6Qz/EGYPCrXO7zD1tzxc/uHw9LQ29Li\",\"id\":1,\"emailVerified\":true,\"verificationToken\":null}"
+    },
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {
+      "1": "{\"principalType\":\"USER\",\"principalId\":\"1\",\"roleId\":1,\"id\":1}"
+    },
+    "Role": {
+      "1": "{\"name\":\"admin\",\"created\":\"2016-11-30T00:45:55.533Z\",\"modified\":\"2016-11-30T00:45:55.533Z\",\"id\":1}"
+    },
+    "app": {},
+    "version": {},
+    "appversion": {}
+  }
+}
