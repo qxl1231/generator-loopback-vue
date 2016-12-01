@@ -52,13 +52,12 @@ To use hot reload, please try this command:npm run watch:js & node .
  
 ## 问题3:If you have error, try this:
 回答:
-```
- npm install
+` npm install
   vueify-insert-css vue-hot-reload-api
   babel-core babel-preset-es2015
   babel-plugin-transform-runtime babel-runtime@5
-  --save-dev
- ```
+  --save-dev `
+ 
   
 ## Hot reloading detail: 
 https://github.com/vuejs/vueify
@@ -82,7 +81,7 @@ https://github.com/vuejs/vueify
 
  - pm2 start -n app_update_server server.js
 
-# LICENSE
+## LICENSE
 
 MIT
 
