@@ -1,6 +1,6 @@
 {
   "name": "generator-loopback-vue",
-  "version": "1.3.0",
+  "version": "1.3.2",
   "main": "server/server.js",
   "scripts": {
     "build:js": "browserify -t vueify ${npm_package_config_src_js} > ${npm_package_config_dist_js}",
@@ -43,9 +43,9 @@
     "node",
     "js"
   ],
-  "author": "qiangxl",
+  "author": "qiangxl:wechat(278931058)",
   "license": "MIT",
-  "description": "generator-loopback-vue",
+  "description": "loopback+vue+vue-resource,前后端分离模板,vue page分页功能,authenticate 权限控制,accesstoken机制,credentials,CI,docker ,hot reload vue",
   "config": {
     "src_js": "client/main.js",
     "dist_js": "client/bundle.js"
