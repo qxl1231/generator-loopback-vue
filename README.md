@@ -1,4 +1,4 @@
-# generator-loopback-vue [![Build Status](https://travis-ci.org/qxl1231/generator-loopback-vue.svg?branch=master)](https://travis-ci.org/qxl1231/generator-loopback-vue)
+# generator-loopback-vue [![Build Status](https://travis-ci.org/qxl1231/generator-loopback-vue.svg?branch=master)](https://travis-ci.org/qxl1231/generator-loopback-vue) ![download Status](https://img.shields.io/npm/dm/generator-loopback-vue.svg)
 
 ## 通过本源码你可以学习到:[![CircleCI](https://circleci.com/gh/qxl1231/generator-loopback-vue.svg?style=svg)](https://circleci.com/gh/qxl1231/generator-loopback-vue)
 - Strongloop是是如何通过一行命令和代码实现restful API接口,包括CRUD等14个接口
