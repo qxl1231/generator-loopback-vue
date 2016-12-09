@@ -1,6 +1,28 @@
-# generator-loopback-vue [![Build Status](https://travis-ci.org/qxl1231/generator-loopback-vue.svg?branch=master)](https://travis-ci.org/qxl1231/generator-loopback-vue) ![download Status](https://img.shields.io/npm/dm/generator-loopback-vue.svg)
+# generator-loopback-vue ``热更新,热部署 典型前后端分离项目模板``
+[![License][license-img]][license-url]
+[![NPM Version][npm-img]][npm-url]
+[![Node Version][node-image]][node-url]
+[![Build Status][travis-img]][travis-url]
+[![Downloads][downloads-image]][downloads-url]
+[![Dependency Status][david-img]][david-url]
 
-## 通过本源码你可以学习到:[![CircleCI](https://circleci.com/gh/qxl1231/generator-loopback-vue.svg?style=svg)](https://circleci.com/gh/qxl1231/generator-loopback-vue)
+[![NPM](https://nodei.co/npm/generator-loopback-vue.png?downloads=true&stars=true)](https://nodei.co/npm/generator-loopback-vue/)
+
+[travis-img]: https://travis-ci.org/qxl1231/generator-loopback-vue.svg?branch=master
+[travis-url]: https://travis-ci.org/qxl1231/generator-loopback-vue
+[npm-img]: https://img.shields.io/npm/v/generator-loopback-vue.svg
+[npm-url]: https://npmjs.org/package/generator-loopback-vue
+[david-img]: https://img.shields.io/david/qxl1231/generator-loopback-vue.svg
+[david-url]: https://david-dm.org/qxl1231/generator-loopback-vue
+[downloads-image]: https://img.shields.io/npm/dm/generator-loopback-vue.svg
+[downloads-url]: https://npmjs.org/package/generator-loopback-vue
+[license-img]: http://img.shields.io/badge/license-MIT-green.svg
+[license-url]: http://opensource.org/licenses/MIT
+[node-image]: https://img.shields.io/badge/node.js-v4.0.0-blue.svg
+[node-url]: http://nodejs.org/download/
+
+
+## 通过本源码你可以学习到:
 - Strongloop是是如何通过一行命令和代码实现restful API接口,包括CRUD等14个接口
 - model是如何定义的,以及model-relation 定义,以及ACL接口权限控制等
 - CI持续集成的配置,Docker容器,docker部署文件
