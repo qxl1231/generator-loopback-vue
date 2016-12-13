@@ -2,6 +2,7 @@
   "restApiRoot": "/api/v1",
   "host": "0.0.0.0",
   "port": 4000,
+  "https-port": 4015,
   "remoting": {
     "context": {
       "enableHttpContext": false
