@@ -22,7 +22,7 @@
 [node-url]: http://nodejs.org/download/
 
 
-## 通过本源码你可以学习到:
+## 通过本源码你可以学习到:(loopback中国讨论组-群号:575600225)
 - Strongloop是是如何通过一行命令和代码实现restful API接口,包括CRUD等14个接口
 - model是如何定义的,以及model-relation 定义,以及ACL接口权限控制等
 - CI持续集成的配置,Docker容器,docker部署文件
