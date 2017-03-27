@@ -109,12 +109,13 @@ MIT
 | No        | ID           | github  |
 | ------------- |:-------------:| -----:|
 | 1     | JLF | https://github.com/cnJLF |
-| 2      | you      |    |
-| 3 | are next      |     |
+| 2     | 萧大大 | https://github.com/freemember007 |
+| 3      | you      |    |
+| 4 | are next      |     |
 
 > ❤❤❤❤感谢我的兄弟们大力支持❤❤❤❤❤❤:
 - No.1    [JLF]:https://github.com/cnJLF
-
+- No.2    [萧大大]:https://github.com/freemember007
 
 
 ![支付宝](./alipay.jpeg) | ![微信](./Wechat.jpeg)
