@@ -41,10 +41,10 @@
 > 镜像地址: daocloud.io/qxl1231/lb-vue2
 
 ## 在线demo:(使用第三方daocloud平台(免费版),每天手动启动,如遇服务挂了,请见谅^.^)
-> [前端界面]:http://loopback-vue.daoapp.io/  
-> 帐号:test,密码:testpwd
+>  http://loopback-vue.daoapp.io/  
+   帐号:test,密码:testpwd
 
-> [后端接口地址]: http://loopback-vue.daoapp.io/explorer
+>   http://loopback-vue.daoapp.io/explorer
 
 
 ## 部分截图
