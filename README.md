@@ -20,8 +20,9 @@
 [node-image]: https://img.shields.io/badge/node.js-v4.0.0-blue.svg
 [node-url]: http://nodejs.org/download/
 
-## 首先,也许你会问:为什么需要前后端分离?
- [请看这个小故事:]:http://2014.jsconf.cn/slides/herman-taobaoweb
+## 首先,为什么需要前后端分离?
+￼
+ http://2014.jsconf.cn/slides/herman-taobaoweb
 
 ## 以下是本项目的feature:(loopback中国讨论组-群号:575600225)
 - Strongloop是是如何通过一行命令和代码实现restful API接口,包括CRUD等14个接口
@@ -35,11 +36,11 @@
 - ***增加了个vue-pagenav 组件的使用 实现分页功能***
 
 
-## Docker镜像 ,在daocloud.io中
+## Docker镜像 
 最新版本: latest
 镜像地址: daocloud.io/qxl1231/lb-vue2
 
-## 在线demo:
+## 在线demo:(由于使用的第三方daocloud平台(免费版),所以每天需要手动启动,如果遇到服务挂了,请见谅)
 > [前端界面]:http://loopback-vue.daoapp.io/   ```帐号:test,密码:testpwd```
 >[后端接口地址]: http://loopback-vue.daoapp.io/explorer
 
